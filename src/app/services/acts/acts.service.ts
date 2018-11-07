@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Act } from '../models/act.model';
+import { Act } from '../../models/act.model';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class HeroService {
+export class ActsService {
+
+  constructor() { }
+
   acts: Act[] = [
     {
       id: 1,
@@ -25,8 +28,6 @@ export class HeroService {
       musicians: []
     }
   ];
-
-  constructor() { }
 
   getActs() {
     return this.acts;
