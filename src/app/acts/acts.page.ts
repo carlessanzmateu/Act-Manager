@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActsService } from '../services/acts/acts.service';
 
 @Component({
   selector: 'app-acts',
@@ -19,7 +20,7 @@ export class ActsPage implements OnInit {
     'build'
   ];
   public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
+  constructor(public actsService: ActsService) {
     for (let i = 1; i < 11; i++) {
       this.items.push({
         title: 'Item ' + i,
@@ -30,5 +31,6 @@ export class ActsPage implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.actsService.getActs());
   }
 }
