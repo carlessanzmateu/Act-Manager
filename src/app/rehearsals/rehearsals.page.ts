@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RehearsalsService } from '../services/rehearsals/rehearsals.service';
 
 @Component({
   selector: 'app-rehearsals',
@@ -19,7 +20,7 @@ export class RehearsalsPage implements OnInit {
     'build'
   ];
   public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
+  constructor(public rehearsalsService: RehearsalsService) {
     for (let i = 1; i < 11; i++) {
       this.items.push({
         title: 'Item ' + i,
@@ -30,5 +31,6 @@ export class RehearsalsPage implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.rehearsalsService.getRehearsals());
   }
 }
