@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActsService } from '../services/acts/acts.service';
+import { ActsService } from '../../services/acts/acts.service';
 
 @Component({
   selector: 'app-acts',

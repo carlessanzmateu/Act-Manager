@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RehearsalsService } from '../services/rehearsals/rehearsals.service';
-import { Rehearsal } from '../../models/rehearsal.model';
+import { RehearsalsService } from '../../services/rehearsals/rehearsals.service';
+import { Rehearsal } from '../../../models/rehearsal.model';
 @Component({
   selector: 'app-rehearsals',
   templateUrl: 'rehearsals.page.html',
@@ -13,7 +13,6 @@ export class RehearsalsPage implements OnInit {
   constructor(public rehearsalsService: RehearsalsService) { }
 
   ngOnInit() {
-    console.log(this.rehearsalsService.getRehearsals());
     this.items = this.rehearsalsService.getRehearsals();
   }
 }

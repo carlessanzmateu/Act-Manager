@@ -28,4 +28,8 @@ export class RehearsalsService {
   getRehearsals() {
     return this.acts;
   }
+
+  getRehearsalDetail(id) {
+    return this.acts[0];
+  }
 }
