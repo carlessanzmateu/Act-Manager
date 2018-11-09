@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 import { RehearsalsPage } from './rehearsals.page';
 
-describe('ListPage', () => {
+describe('RehearsalsPage', () => {
   let component: RehearsalsPage;
   let fixture: ComponentFixture<RehearsalsPage>;
   let listPage: HTMLElement;
@@ -29,7 +29,7 @@ describe('ListPage', () => {
   it('should have a list of 10 elements', () => {
     listPage = fixture.nativeElement;
     const items = listPage.querySelectorAll('ion-item');
-    expect(items.length).toEqual(10);
+    expect(items.length).toEqual(2);
   });
 
 });

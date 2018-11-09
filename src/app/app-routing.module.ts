@@ -9,16 +9,20 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
+    loadChildren: './views/home/home.module#HomePageModule'
   },
   {
     path: 'rehearsals',
-    loadChildren: './rehearsals/rehearsals.module#RehearsalsPageModule'
+    loadChildren: './views/rehearsals/rehearsals.module#RehearsalsPageModule'
   },
   {
     path: 'acts',
-    loadChildren: './acts/acts.module#ActsPageModule'
-  }
+    loadChildren: './views/acts/acts.module#ActsPageModule'
+  },
+  {
+    path: 'rehearsal/:id',
+    loadChildren: './views/rehearsal-detail/rehearsal-detail.module#RehearsalDetailPageModule'
+  },
 ];
 
 @NgModule({
