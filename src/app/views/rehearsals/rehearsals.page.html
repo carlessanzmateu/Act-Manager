@@ -11,7 +11,7 @@
   
   <ion-content>
     <ion-list>
-      <ion-item *ngFor="let item of items">
+      <ion-item *ngFor="let item of items" [routerDirection]="'root'" [href]="'/rehearsal/' + item.id">
         <div class="item-note" slot="end">
           {{item.id}} {{item.info}}
         </div>

@@ -5,9 +5,6 @@ import { Rehearsal } from '../../../models/rehearsal.model';
   providedIn: 'root'
 })
 export class RehearsalsService {
-
-  constructor() { }
-
   acts: Rehearsal[] = [
     {
       id: 1,
@@ -25,11 +22,14 @@ export class RehearsalsService {
     }
   ];
 
-  getRehearsals() {
+  constructor() { }
+
+  getRehearsals(): Array <Rehearsal> {
     return this.acts;
   }
 
-  getRehearsalDetail(id) {
-    return this.acts[0];
+  getRehearsalDetail(id: number): Rehearsal {
+    console.log(id);
+    return this.acts.find(act => act.id === id);
   }
 }
